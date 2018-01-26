@@ -24,34 +24,36 @@ Then, all dependencies are prepared and configured, and the executable file 'Bio
 `BioSV.main.R  [call/genotype]  [options]`
  
 Options:
-`-b  <file> , --bam= <file> ,  <required> `
+```
+-b  <file> , --bam= <file> ,  <required>
         
-Input bam files (sorted bam files by bwa mem, seperated by comma)
+# Input bam files (sorted bam files by bwa mem, seperated by comma)
         
- ` --bedpe <file>, <optional>`
+--bedpe <file>, <optional>
         
-SVs prepared to be genotyped when the mode is set to genotype
+# SVs prepared to be genotyped when the mode is set to genotype
         
-`  -o <directory>, --output=<directory>`
+-o <directory>, --output=<directory>
 
-Directory for output files [BioSV-output]
+# Directory for output files [BioSV-output]
         
-`  -t <int>, --thread=<int>`
+-t <int>, --thread=<int>
 
-Number of threads
+# Number of threads
         
-`-e <flag>`
+-e <flag>
 
-Exclude high coverage regions
+# Exclude high coverage regions
         
-`--minMRC <int>`
+--minMRC <int>
 
-Minimal mutant read counts [4]
+# Minimal mutant read counts [4]
         
- ` -h, --help`
+-h, --help
 
-Print this help message and exit
- 
+# Print this help message and exit
+
+```
 ### Example
 
 - Data preprocessing:
@@ -73,13 +75,10 @@ Print this help message and exit
 
 Note: test.bedpe file should be formated as below:
 
-|chrom-1 | start-1 | end-1  | chrom-2 | start-2	| end-2 | 	SV-type | mutant read count (sample-1)	| mutant read count (sample-2) | ... | mutant read count (sample-n)|
-
-|------|-------|---|----|---|----|----|---|---|---|---|----|
-
-|chr1 |	100	| 101 | chr2 | 202 | 203 | TRA | 20 | 10 |  ...	| 0 |
-
-|chr1 |	200 | 201 | chr1 | 302 | 303 | DEL | 0 | 10 | ... | 20 |
+    chrom-1 | start-1 | end-1  | chrom-2 | start-2	| end-2 | 	SV-type | mutant read count (sample-1)	| mutant read count (sample-2) | ... | mutant read count (sample-n)
+------|-------|---|----|---|----|----|---|---|---|---|----
+chr1 |	100	| 101 | chr2 | 202 | 203 | TRA | 20 | 10 |  ...	| 0
+chr1 |	200 | 201 | chr1 | 302 | 303 | DEL | 0 | 10 | ... | 20
 
 The order of the samples should be consistent with that of bam files. 
 
