@@ -1,1 +1,2 @@
-chr21chr22
+chr21
+chr22
