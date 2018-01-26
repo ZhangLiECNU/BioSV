@@ -66,10 +66,10 @@ Options:
 
 Note: test.bedpe file should be formated as below:
 
-| chrom-1  |  start-1 | end-1  | chrom-2 | start-2	| end-2 | 	SV-type | mutant read count (sample-1)	| mutant read count (sample-2) | ...	 | mutant read count (sample-n) | 
-| :------ | --------:| ---:| ----:|---:|----:|----:|---:|---:|---:|---:|:--: |
-|chr1 |	100	| 101 | chr2	| 202 | 203 | TRA | 20 | 10 |  ...	| 0 |
-|chr1 |	200  | 201 | chr1 | 302	 | 303 | DEL	| 0 | 10 | ... | 20 |
+chrom-1  |  start-1 | end-1  | chrom-2 | start-2	| end-2 | 	SV-type | mutant read count (sample-1)	| mutant read count (sample-2) | ...	 | mutant read count (sample-n)
+------ | --------:| ---:| ----:|---:|----:|----:|---:|---:|---:|---:|:--
+chr1 |	100	| 101 | chr2	| 202 | 203 | TRA | 20 | 10 |  ...	| 0 
+chr1 |	200  | 201 | chr1 | 302	 | 303 | DEL	| 0 | 10 | ... | 20 
 
 The order of the samples should be consistent with that of bam files. 
 
