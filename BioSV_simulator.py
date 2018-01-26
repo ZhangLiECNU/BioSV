@@ -325,7 +325,7 @@ if __name__ == "__main__":
     else:
         df=pd.read_table(os.path.abspath(options.bed),header=None)
         df.columns=['#chrom1','start1','end1','chrom2','start2','end2','strand','pattern','genotype','sg']
-    df=df.sort(['#chrom1','start1','end1','pattern'])
+    df=df.sort_values(['#chrom1','start1','end1','pattern'])
     sys.stdout.write("Generate simulated fasta file\n")
     prefix=os.path.abspath(options.out_dir)+"/"+options.prefix
     writeModifiedGenome(options.Reference,prefix,df.values.tolist(),['NA','NB'],options.mu,'N',haplotype=True)
