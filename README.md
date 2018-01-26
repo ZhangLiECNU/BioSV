@@ -15,6 +15,12 @@ Breakpoint-based identification of Structural Variation (BioSV), is an accurate 
 ### <a name="req"></a>Requirements and installation
 
 Make sure that *awk*, and *R programming* software are already for invoking.
+
+Download BioSV
+
+`git clone https://github.com/ZhangLiECNU/BioSV.git`
+
+
 To install BioSV, users should change directory to "./BioSV", and run 
 `sh Install.sh`
 Then, all dependencies are prepared and configured, and the executable file 'BioSV' is created.
