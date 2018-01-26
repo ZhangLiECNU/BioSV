@@ -25,25 +25,32 @@ Then, all dependencies are prepared and configured, and the executable file 'Bio
  
 Options:
 `-b  <file> , --bam= <file> ,  <required> `
-        Input bam files (sorted bam files by bwa mem, seperated by comma)
+        
+Input bam files (sorted bam files by bwa mem, seperated by comma)
         
  ` --bedpe <file>, <optional>`
-        SVs prepared to be genotyped when the mode is set to genotype
+        
+SVs prepared to be genotyped when the mode is set to genotype
         
 `  -o <directory>, --output=<directory>`
-        Directory for output files [BioSV-output]
+
+Directory for output files [BioSV-output]
         
 `  -t <int>, --thread=<int>`
-        Number of threads
+
+Number of threads
         
 `-e <flag>`
-        Exclude high coverage regions
+
+Exclude high coverage regions
         
 `--minMRC <int>`
-        Minimal mutant read counts [4]
+
+Minimal mutant read counts [4]
         
  ` -h, --help`
-        Print this help message and exit
+
+Print this help message and exit
  
 ### Example
 
@@ -67,8 +74,11 @@ Options:
 Note: test.bedpe file should be formated as below:
 
 |chrom-1 | start-1 | end-1  | chrom-2 | start-2	| end-2 | 	SV-type | mutant read count (sample-1)	| mutant read count (sample-2) | ... | mutant read count (sample-n)|
+
 |------|-------|---|----|---|----|----|---|---|---|---|----|
+
 |chr1 |	100	| 101 | chr2 | 202 | 203 | TRA | 20 | 10 |  ...	| 0 |
+
 |chr1 |	200 | 201 | chr1 | 302 | 303 | DEL | 0 | 10 | ... | 20 |
 
 The order of the samples should be consistent with that of bam files. 
@@ -80,6 +90,7 @@ To test the performance of BioSV, users can run test.sh hg19.fasta. The command 
 If users need to specify any other chromosomes, you can add the names of reference sequences to the file 
 
 ```./test_data/chromosomes.txt```
+
 When the script test.sh runs successfully, the BioSV's sensitivity, precision, and genotyping accuracy are recorded in the file of 
 
 `./test_data/performance.txt`
