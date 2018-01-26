@@ -66,10 +66,10 @@ Options:
 
 Note: test.bedpe file should be formated as below:
 
-chrom-1 | start-1 | end-1  | chrom-2 | start-2	| end-2 | 	SV-type | mutant read count (sample-1)	| mutant read count (sample-2) | ... | mutant read count (sample-n)
-------|-------|---|----|---|----|----|---|---|---|---|----
-chr1 |	100	| 101 | chr2 | 202 | 203 | TRA | 20 | 10 |  ...	| 0 
-chr1 |	200 | 201 | chr1 | 302 | 303 | DEL | 0 | 10 | ... | 20 
+|chrom-1 | start-1 | end-1  | chrom-2 | start-2	| end-2 | 	SV-type | mutant read count (sample-1)	| mutant read count (sample-2) | ... | mutant read count (sample-n)|
+|------|-------|---|----|---|----|----|---|---|---|---|----|
+|chr1 |	100	| 101 | chr2 | 202 | 203 | TRA | 20 | 10 |  ...	| 0 |
+|chr1 |	200 | 201 | chr1 | 302 | 303 | DEL | 0 | 10 | ... | 20 |
 
 The order of the samples should be consistent with that of bam files. 
 
@@ -78,8 +78,10 @@ The order of the samples should be consistent with that of bam files.
 The test data can be simulated by BioSV_simulator. BioSV_simulator is a python script, which can simulate structural variations from diploid genomes, and generate fastq files.
 To test the performance of BioSV, users can run test.sh hg19.fasta. The command line will simulate structural variations from chromosomes of 21 and 22, align the simulated reads, and call SV using BioSV. 
 If users need to specify any other chromosomes, you can add the names of reference sequences to the file 
-`./test_data/chromosomes.tx`
+
+```./test_data/chromosomes.txt```
 When the script test.sh runs successfully, the BioSV's sensitivity, precision, and genotyping accuracy are recorded in the file of 
+
 `./test_data/performance.txt`
 
 
