@@ -24,36 +24,36 @@ Then, all dependencies are prepared and configured, and the executable file 'Bio
 `BioSV.main.R  [call/genotype]  [options]`
  
 Options:
-
-`-b  <file> , --bam= <file> ,  <required>`
+<pre>
+  -b  <file> , --bam= <file> ,  <required>
         
 Input bam files (sorted bam files by bwa mem, seperated by comma)
         
-`--bedpe <file>, <optional>`
+  --bedpe <file>, <optional>
         
 SVs prepared to be genotyped when the mode is set to genotype
         
-`-o <directory>, --output=<directory>`
+  -o <directory>, --output=<directory>
 
 Directory for output files [BioSV-output]
         
-`-t <int>, --thread=<int>`
+  -t <int>, --thread=<int>
 
 Number of threads
         
-`-e <flag>`
+  -e <flag>
 
 Exclude high coverage regions
         
-`--minMRC <int>`
+  --minMRC <int>
 
 Minimal mutant read counts [4]
         
-`-h, --help`
+  -h, --help
 
 Print this help message and exit
+</pre>
 
-```
 ### Example
 
 - Data preprocessing:
