@@ -1,20 +1,25 @@
 ## BioSV (Breakpoint-based identification of Structural Variation)
 
-[TOC]
+### Table of Contents
+* [Overview](#overv)
+* [Requirements and installation](#req)
+* [Usage](#use)
+* [Example](#exm)
+* [Test data](#tes)
 
 
-### Overview
+### <a name="overv"></a>Overview
 
 Breakpoint-based identification of Structural Variation (BioSV), is an accurate and efficient SV caller, which not only uses split-reads and discordant read pairs for SV prediction, but also integrates discordant and concordant read pairs (fragments) to genotype SVs under a statistical framework. Specifically, BioSV also provides a multiple-sample-based SV caller for family or population based WGS studies. Moreover, BioSV exhibits high performance on both simulated and real WGS data in SV calling and genotyping.
 
-### Requirements and installation
+### <a name="req"></a>Requirements and installation
 
 Make sure that *awk*, and *R programming* software are already for invoking.
 To install BioSV, users should change directory to "./BioSV", and run 
 `sh Install.sh`
 Then, all dependencies are prepared and configured, and the executable file 'BioSV' is created.
 
-### Usage 
+### <a name="use"></a>Usage 
 
   Users run the command line `BioSV -h` or `BioSV --help` will show the following messages.
   
@@ -54,7 +59,7 @@ Minimal mutant read counts [4]
 Print this help message and exit
 </pre>
 
-### Example
+### <a name="exm"></a>Example
 
 - Data preprocessing:
  ```
@@ -75,6 +80,16 @@ Print this help message and exit
 
 Note: test.bedpe file should be formated as below:
 
+Sample Name | SRA Run ID | Number of Reads | Condition
+----------- | ---------- | --------------- | ---------
+LPS_6h 	    | [SRR937564](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR937564) | 1,093,275 | 6h post-stimuation with LPS
+LPS_6h_2    | [SRR937558](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR937558) | 1,029,972 | 6h post-stimuation with LPS
+LPS_6h_3    | [SRR937568](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR937568) | 1,339,876 | 6h post-stimuation with LPS
+Unstimulated	| [SRR937920](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR937920) | 1,409,495 | unstimulated
+Unstimulated_2	| [SRR937927](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR937927) | 1,526,289 | unstimulated
+Unstimulated_3	| [SRR937946](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR937946) | 1,548,816 | unstimulated
+
+
 chrom-1 | start-1 | end-1  | chrom-2 | start-2	| end-2 | 	SV-type | mutant read count (sample-1)	| mutant read count (sample-2) | ... | mutant read count (sample-n)
 ------|-------|---|----|---|----|----|---|---|---|---|----
 chr1 |	100	| 101 | chr2 | 202 | 203 | TRA | 20 | 10 |  ...	| 0
@@ -82,7 +97,7 @@ chr1 |	200 | 201 | chr1 | 302 | 303 | DEL | 0 | 10 | ... | 20
 
 The order of the samples should be consistent with that of bam files. 
 
-### Test data
+### <a name="tes"></a>Test data
 
 The test data can be simulated by BioSV_simulator. BioSV_simulator is a python script, which can simulate structural variations from diploid genomes, and generate fastq files.
 To test the performance of BioSV, users can run test.sh hg19.fasta. The command line will simulate structural variations from chromosomes of 21 and 22, align the simulated reads, and call SV using BioSV. 
