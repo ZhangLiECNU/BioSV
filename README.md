@@ -80,18 +80,8 @@ Print this help message and exit
 
 Note: test.bedpe file should be formated as below:
 
-Sample Name | SRA Run ID | Number of Reads | Condition
------------ | ---------- | --------------- | ---------
-LPS_6h 	    | [SRR937564](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR937564) | 1,093,275 | 6h post-stimuation with LPS
-LPS_6h_2    | [SRR937558](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR937558) | 1,029,972 | 6h post-stimuation with LPS
-LPS_6h_3    | [SRR937568](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR937568) | 1,339,876 | 6h post-stimuation with LPS
-Unstimulated	| [SRR937920](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR937920) | 1,409,495 | unstimulated
-Unstimulated_2	| [SRR937927](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR937927) | 1,526,289 | unstimulated
-Unstimulated_3	| [SRR937946](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR937946) | 1,548,816 | unstimulated
-
-
-chrom-1 | start-1 | end-1  | chrom-2 | start-2	| end-2 | 	SV-type | mutant read count (sample-1)	| mutant read count (sample-2) | ... | mutant read count (sample-n)
-------|-------|---|----|---|----|----|---|---|---|---|----
+chrom-1 | start-1 | end-1 | chrom-2 | start-2 | end-2 | SV-type | mutant read count (sample-1) | mutant read count (sample-2) | ... | mutant read count (sample-n)
+----------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | --------------- | ---------
 chr1 |	100	| 101 | chr2 | 202 | 203 | TRA | 20 | 10 |  ...	| 0
 chr1 |	200 | 201 | chr1 | 302 | 303 | DEL | 0 | 10 | ... | 20
 
