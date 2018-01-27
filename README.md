@@ -23,13 +23,12 @@ Breakpoint-based identification of Structural Variation (BioSV), is an accurate 
     * [igraph](https://github.com/igraph/igraph)
     * [doParallel](https://cran.r-project.org/web/packages/doParallel/index.html)
 
-- Download BioSV
-
-`git clone https://github.com/ZhangLiECNU/BioSV.git`
-
-- To install BioSV, users should change directory to "./BioSV", and run 
-`sh Install.sh`
-
+- Installation
+```
+git clone https://github.com/ZhangLiECNU/BioSV.git
+cd ./BioSV
+sh Install.sh
+```
 Then, all dependencies are prepared and configured, and the executable file 'BioSV' is created.
 
 ### <a name="use"></a>Usage 
