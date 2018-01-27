@@ -16,12 +16,19 @@ Breakpoint-based identification of Structural Variation (BioSV), is an accurate 
 - Requirements
   
   * *awk*
+  
   * *R programming*
+  
   * python 2.7 or higher version
+  
   * [pysam](https://github.com/pysam-developers/pysam)
+  
   * [data.table](https://cran.r-project.org/web/packages/data.table/)
+  
   * tools (R package)
+  
   * [igraph](https://github.com/igraph/igraph)
+  
   * [doParallel](https://cran.r-project.org/web/packages/doParallel/index.html)
 
 - Download BioSV
