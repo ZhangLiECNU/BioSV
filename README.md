@@ -13,16 +13,22 @@
 Breakpoint-based identification of Structural Variation (BioSV), is an accurate and efficient SV caller, which not only uses split-reads and discordant read pairs for SV prediction, but also integrates discordant and concordant read pairs (fragments) to genotype SVs under a statistical framework. Specifically, BioSV also provides a multiple-sample-based SV caller for family or population based WGS studies. Moreover, BioSV exhibits high performance on both simulated and real WGS data in SV calling and genotyping.
 
 ### <a name="req"></a>Requirements and installation
+- Requirements
+  * *awk* 
+  * *R programming*
+  * python 2.7 or higher version
+  * [pysam](https://github.com/pysam-developers/pysam)
+  * [data.table](https://cran.r-project.org/web/packages/data.table/)
+  * [tools](https://github.com/igraph/igraph)
+  * [doParallel](https://cran.r-project.org/web/packages/doParallel/index.html)
 
-Make sure that *awk* and *R programming* software are already for invoking. In addtion, the python 2.7 or higher versions with *pysam* is also required.
-
-Download BioSV
+- Download BioSV
 
 `git clone https://github.com/ZhangLiECNU/BioSV.git`
 
-
-To install BioSV, users should change directory to "./BioSV", and run 
+- To install BioSV, users should change directory to "./BioSV", and run 
 `sh Install.sh`
+
 Then, all dependencies are prepared and configured, and the executable file 'BioSV' is created.
 
 ### <a name="use"></a>Usage 
