@@ -27,6 +27,6 @@ python2.7 BioSV_simulator.py -g ./test_data/test.fa -o test_data/simulate -p exa
 ./BioSV call -b ./test_data/test.sort.bam -o test_data/BioSV_output -t 2 --minMRC 4 
 
 awk '{OFS="\t";print $1,$2,$3,$4,$5,$6,NR,".",".",".",$9,$10}' ./test_data/simulate/example_N.bedpe >./test_data/simulate/simu.bedpe
-grep -v "#" ./test_data/BioSV_output/BioSV.output.bedpe | grep  "PASS" | awk '{OFS="\t";print $1,$2,$3,$4,$5,$6,NR,".",".",".",$7,substr($9,1,3)}' > ./test_data/BioSV_output/predicted.hc.bedpe
-Rscript performance.R
+grep -v "#" ./test_data/BioSV_output/BioSV.output.bedpe | grep  "PASS" | awk '{OFS="\t";print $1,$2,$3,$4,$5,$6,NR,".",".",".",$7,substr($9,4,3)}' > ./test_data/BioSV_output/predicted.hc.bedpe
+Rscript ./test_data/performance.R
 
