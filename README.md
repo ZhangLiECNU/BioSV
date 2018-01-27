@@ -36,7 +36,7 @@ Then, all dependencies are prepared and configured, and the executable file 'Bio
  
 Options:
 <pre>
-  -b  <file> , --bam= <file> ,  <required>
+  -b  <<file>> , --bam= <file> ,  <required>
         
 Input bam files (sorted bam files by bwa mem, seperated by comma)
         
