@@ -20,7 +20,7 @@ cat ./test_data/chromosomes.txt |xargs ./tools/samtools faidx ${Ref} > test_data
 python2.7 BioSV_simulator.py -g ./test_data/test.fa -o test_data/simulate -p example -c ./test_data/chromosomes.txt -n 50,0,50,50,50 -N 10000000
 
 ### data preprocessing
-./tools/bwa mem ./test_data/test.fa ./test_data/simulate/example_N1.fq ./test_data/simulate/example_N2.fq | ./tools/samtools view -bS - > ./test_data/test.bam
+./tools/bwa mem -t 8 ./test_data/test.fa ./test_data/simulate/example_N1.fq ./test_data/simulate/example_N2.fq | ./tools/samtools view -bS - > ./test_data/test.bam
 ./tools/samtools sort -o ./test_data/test.sort.bam ./test_data/test.bam
 ./tools/samtools index ./test_data/test.sort.bam
 #Structural variation calling
