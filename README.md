@@ -107,6 +107,10 @@ To test the performance of BioSV, users can run test.sh hg19.fasta. The command 
 If users need to specify any other chromosomes, you can add the names of reference sequences to the file 
 
 `./test_data/chromosomes.txt`
+and then run
+```
+sh test.sh 
+```
 
 When the script test.sh runs successfully, the BioSV's sensitivity, precision, and genotyping accuracy are recorded in the file of 
 
