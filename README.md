@@ -119,9 +119,9 @@ When the script test.sh runs successfully, the BioSV's sensitivity, precision, a
 
 
 Users can check the output files in the directory
-```
+
 `./test_data/BioSV_output`
-```
+
 
 
 
