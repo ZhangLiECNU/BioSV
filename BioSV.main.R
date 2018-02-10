@@ -599,6 +599,8 @@ svs.excluded = t(sapply(strsplit(system(paste(bedtools,"pairtobed -type neither 
 if(nrow(svs.excluded) > 0)
 {
 merged.multi.samples = merged.multi.samples[as.numeric(svs.excluded[,7]),]
+mrc.mat = mrc.mat[as.numeric(svs.excluded[,7]),]
+mq20.mat = mq20.mat[as.numeric(svs.excluded[,7]),]
 }
 }
 }else
@@ -716,13 +718,5 @@ cat(paste("##INFO:",date(),": BioSV finished its work\n",sep = ""))
 save.image(paste(args.list.allbam$OutDir,"/BioSV.output.Rdata",sep = ""))
 
 }
-
-
-
-
-
-
-
-
 
 
